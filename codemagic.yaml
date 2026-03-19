@@ -1,11 +1,12 @@
 workflows:
   ios-workflow:
-    name: iOS Workflow
+    name: iOS Build
     max_build_duration: 60
     environment:
       flutter: stable
 
     scripts:
+      - flutter create .
       - flutter pub get
       - flutter build ios --release --no-codesign
 
